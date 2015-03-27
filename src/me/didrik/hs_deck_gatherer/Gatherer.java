@@ -36,6 +36,7 @@ public class Gatherer {
     private void writeCardName(String name) {
         for(int c: name.toCharArray()){
             if(c == '\'') c = KeyEvent.VK_QUOTE;
+            if(c == ':') c = ' ';
             robot.keyPress(c);
             robot.keyRelease(c);
         }

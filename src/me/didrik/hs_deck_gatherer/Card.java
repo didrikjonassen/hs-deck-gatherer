@@ -11,7 +11,6 @@ public class Card {
     }
 
     public Card(String name, String count){
-        this.name = name;
-        this.count = Integer.parseInt(count);
+        this(name, Integer.parseInt(count));
     }
 }
