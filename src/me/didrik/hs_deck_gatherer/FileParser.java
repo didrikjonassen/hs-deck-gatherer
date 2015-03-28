@@ -11,7 +11,7 @@ public class FileParser {
         return Files.lines(file.toPath()).map((s) -> {
             String[] list = s.split(",");
             return new Card(list[0].trim(), list[1].trim());
-        }).toArray(size -> new Card[size]);
+        }).toArray(Card[]::new);
 
     }
 }
